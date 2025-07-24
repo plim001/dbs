@@ -16,5 +16,9 @@ def main():
     pred = model.predict([[q]])
     return(render_template("main.html"))
 
+@app.route("/sepia",methods=["GET","POST"])
+def sepia():
+    return(render_template("sepia_hf.html"))
+
 if __name__ == "__main__":
     app.run()
